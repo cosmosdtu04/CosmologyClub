@@ -38,19 +38,12 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-[#040407]">
-      {/* Background Space Image from Unsplash - realistic dark star field */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105 transform transition-transform duration-10000"
-        style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=1920&q=80')`,
-        }}
-      />
-      
+    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-transparent">
+
       {/* Dark overlay for text readability and cinematic outer space style */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/85 to-black" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,#040407_95%)]" />
-      
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,rgba(4,4,7,0.7)_95%)]" />
+
       {/* Dynamic Star Overlays */}
       <div className="star-dust absolute inset-0 mix-blend-screen pointer-events-none" />
       <div className="stars-layer-1 absolute inset-0 mix-blend-screen pointer-events-none" />
@@ -69,16 +62,15 @@ export default function Hero() {
           className="space-y-6"
         >
           {/* Badge */}
-          <motion.div 
-            variants={itemVariants} 
+          <motion.div
+            variants={itemVariants}
             className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-md text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-violet-400"
           >
             <Orbit className="w-3.5 h-3.5 animate-spin" style={{ animationDuration: "12s" }} />
-            <span>Ad Astra Per Aspera</span>
           </motion.div>
 
           {/* Heading */}
-          <motion.h1 
+          <motion.h1
             variants={itemVariants}
             className="font-display text-4xl sm:text-6xl md:text-8xl font-extrabold tracking-tight text-white uppercase drop-shadow-[0_0_15px_rgba(255,255,255,0.08)] px-4"
           >
@@ -86,7 +78,7 @@ export default function Hero() {
           </motion.h1>
 
           {/* Subheading */}
-          <motion.h2 
+          <motion.h2
             variants={itemVariants}
             className="font-display text-base sm:text-xl md:text-3xl font-semibold tracking-wider text-slate-300 uppercase px-4"
           >
@@ -94,19 +86,19 @@ export default function Hero() {
           </motion.h2>
 
           {/* Divider */}
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="w-20 sm:w-24 h-1 bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 mx-auto rounded-full shadow-[0_0_10px_rgba(139,92,246,0.5)]"
           />
 
           {/* Inspiring Lines */}
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="max-w-2xl mx-auto mt-6 py-4 px-4 sm:px-6 rounded-2xl bg-slate-950/45 border border-white/5 backdrop-blur-sm"
           >
             <ul className="space-y-2 md:space-y-3">
               {inspiringLines.map((line, index) => (
-                <li 
+                <li
                   key={index}
                   className="text-xs sm:text-sm md:text-base text-slate-300 font-medium tracking-wide flex items-center justify-center space-x-2"
                 >
@@ -118,7 +110,7 @@ export default function Hero() {
           </motion.div>
 
           {/* CTA Buttons */}
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="pt-6 flex justify-center"
           >

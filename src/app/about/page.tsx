@@ -75,7 +75,7 @@ export default function About() {
   ];
 
   return (
-    <div className="flex-1 w-full bg-[#040407] text-white relative pt-24">
+    <div className="flex-1 w-full text-white relative pt-24">
       {/* Starry bg dust */}
       <div className="star-dust absolute inset-0 mix-blend-screen pointer-events-none" />
 
@@ -84,7 +84,7 @@ export default function About() {
       <div className="nebula-glow-2 top-[50%] left-[5%] animate-pulse-slow" style={{ animationDelay: "3s" }} />
 
       {/* Page Header Banner */}
-      <section className="relative py-20 bg-[#040407] overflow-hidden border-b border-white/5">
+      <section className="relative py-20 overflow-hidden border-b border-white/5">
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-20 mix-blend-color-dodge"
           style={{

@@ -42,7 +42,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex-1 w-full bg-slate-950 text-white relative">
+    <div className="flex-1 w-full text-white relative">
       {/* Hero Section */}
       <Hero />
 
